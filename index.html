@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+    <div id="start-screen" class="container">
+        <h1>JavaScript Test</h1>
+        <p>You will face 25 randomly selected questions. You can skip, go back, and change your answers.</p>
+        <button id="start-btn" class="primary-btn">Start Test</button>
+    </div>
+
+    <div id="quiz-screen" class="container hidden">
+        <div class="quiz-header">
+            <span id="question-tracker">Question 1 / 25</span>
+            <span class="status-badge">In Progress</span>
+        </div>
+        
+        <h2 id="question-text">Loading question...</h2>
+        
+        <ul id="options-list">
+            </ul>
+
+        <div class="nav-controls">
+            <button id="prev-btn" class="secondary-btn" disabled>← Previous</button>
+            <button id="skip-btn" class="secondary-btn">Skip →</button>
+            <button id="submit-btn" class="primary-btn">Submit Answer</button>
+        </div>
+    </div>
+
+    <div id="result-screen" class="container hidden">
+        <h2>Test Complete</h2>
+        <div class="score-display">
+            Score: <span id="final-score">0</span> / 25
+        </div>
+        
+        <h3>Performance Review</h3>
+        <div id="review-container">
+            </div>
+
+        <button onclick="location.reload()" class="primary-btn mt-2">Take New Test</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
